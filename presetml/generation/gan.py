@@ -132,6 +132,7 @@ def define_generator(out_dim: int = 216,
     model = Dense(parameters.generator_parameters.layer_size,
                   kernel_initializer=init)(common_input)
     model = LeakyReLU(alpha=parameters.generator_parameters.relu_alpha)(model)
+    model = Dropout(parameters.generator_parameters.dropout)(model)
     for _ in range(parameters.generator_parameters.hidden_layers):
         model = Dense(parameters.generator_parameters.layer_size,
                       kernel_initializer=init)(model)
