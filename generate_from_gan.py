@@ -33,7 +33,10 @@ def main(n_samples, model_path, data_len, dest_path, generated_preset_name,
     )
     if config.cgan_labels:
         class_labels = list(
-            map(lambda label: config.cgan_labels[label], class_labels)
+            map(
+                lambda label: config.cgan_labels[np.argmax(label)], # convert one-hot to int with argmax
+                class_labels
+            )
         )
     # rescale back to [0,1] to write the preset for human evaluation
     gen_presets = (gen_vectors + 1.0) / 2.0
