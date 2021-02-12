@@ -1,6 +1,6 @@
 import os
 
-PROJECT_ROOT = '/Users/vader/projects/preset-generation/analog-preset-ml'
+PROJECT_ROOT = os.getcwd()
 DEFAULT_PRESET_JSON_PATH = os.path.join(PROJECT_ROOT, 'presetml', 'parsing',
                                         'default_dict.json')
 
