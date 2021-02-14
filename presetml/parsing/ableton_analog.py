@@ -11,61 +11,58 @@ from presetml import constants
 EXTRACTED_PRESET_DIR = '/tmp/presets'
 
 
-def extract_range(param):
-    value_range = param.get('MidiControllerRange')
-    if value_range:
-        return extract_number_from_string(value_range['Min']['@Value']), \
-               extract_number_from_string(value_range['Max']['@Value'])
-    else:
-        return None
+def read_presets_from_dir(
+        target_path=f'{constants.ANALOG_PRESETS_PATH}',
+        labels=None) -> [str, np.array]:
+    vectors = []
+    label = None
+    for root, dirs, files in os.walk(target_path):
+        if labels:
+            found = False
+            for key in labels:
+                if key in root:
+                    # build one hot vector
+                    found = True
+                    label = int(labels.index(key))
+            if not found:
+                continue
+        vectors += [vector_from_file(root, f, constants.TARGET_KEYS) + (label, )
+                    for f in files if f.endswith('.adv')]
+    return vectors
 
 
-def normalize_parameter(value, range):
-    return (value - range[0]) / (range[1] - range[0])
+def vector_from_file(root: str, file_name: str,
+                     target_keys: list = constants.TARGET_KEYS
+                     ) -> (str, np.array):
+    xml_preset = unzip_preset(os.path.join(root, file_name))
+    return xml_preset, vector_from_preset(xml_preset, target_keys)
 
 
-def denormalize_parameter(value, range):
-    return value * (range[1] - range[0]) + range[0]
+def unzip_preset(file_path: str) -> str:
+    with gzip.open(file_path, 'r') as zip_handle:
+        return zip_handle.read()
 
 
-def get_param_value_string(param) -> str:
-    param_value = param.get('@Value')
-    try:
-        return param_value if param_value else param['Manual']['@Value']
-    except KeyError:
-        raise Exception('Un-parseable parameter provided')
+def vector_from_preset(xmlpreset: str, target_keys: list) -> np.array:
+    parameters_json = xmltodict.parse(xmlpreset)
+    return build_vector(parameters_json, target_keys)
 
 
-def extract_number_from_string(string):
-    if string == 'true':
-        param_value = 1
-    elif string == 'false':
-        param_value = 0
-    else:
-        try:
-            param_value = int(string)
-        except ValueError:
-            param_value = float(string)
-    return param_value
+def build_vector(parameters_json: dict, target_keys: list) -> np.array:
+    parameters = [(key[-1], extract_target_metadata(parameters_json, key))
+                  for key in target_keys]
+    parameter_values = []
+    for key, metadata_dict in parameters:
+        parameter_values += extract_values_from_parameter(key, metadata_dict)
+    return list(parameter_values)
 
 
-def extract_value_from_string(param_value_dict, param_metadata_dict):
-    param_value_dict = extract_number_from_string(param_value_dict)
-    value_range = extract_range(param_metadata_dict)
-    if value_range:
-        param_value_dict = normalize_parameter(param_value_dict, value_range)
-    return param_value_dict
+def extract_target_metadata(parameters_json, target_key):
+    value_dict = parameters_json
+    for level in target_key:
+        value_dict = value_dict[level]
 
-
-def expand_categorical_variable(key, metadata_dict, param_value_dict):
-    value = extract_value_from_string(param_value_dict, metadata_dict)
-    param_value = [0] * constants.CATEGORICAL_RANGES.get(key, 2)
-    param_value[value] = 1
-    return param_value
-
-
-def collapse_categorical_variable(key):
-    pass
+    return value_dict
 
 
 def extract_values_from_parameter(key, metadata_dict):
@@ -85,69 +82,61 @@ def extract_values_from_parameter(key, metadata_dict):
     return param_values
 
 
-def extract_target_metadata(parameters_json, target_key):
-    value_dict = parameters_json
-    for level in target_key:
-        value_dict = value_dict[level]
-
-    return value_dict
-
-
-def build_vector(parameters_json: dict, target_keys: list) -> np.array:
-    parameters = [(key[-1], extract_target_metadata(parameters_json, key))
-                  for key in target_keys]
-    parameter_values = []
-    for key, metadata_dict in parameters:
-        parameter_values += extract_values_from_parameter(key, metadata_dict)
-    return list(parameter_values)
+def get_param_value_string(param) -> str:
+    param_value = param.get('@Value')
+    try:
+        return param_value if param_value else param['Manual']['@Value']
+    except KeyError:
+        raise Exception('Un-parseable parameter provided')
 
 
-def vector_from_preset(xmlpreset: str, target_keys: list) -> np.array:
-    preset_json = xmltodict.parse(xmlpreset)
-    parameters_json = preset_json
-    return build_vector(parameters_json, target_keys)
+def expand_categorical_variable(key, metadata_dict, param_value_dict):
+    value = extract_value_from_string(param_value_dict, metadata_dict)
+    param_value = [0] * constants.CATEGORICAL_RANGES.get(key, 2)
+    param_value[value] = 1
+    return param_value
 
 
-def unzip_preset(file_path: str) -> str:
-    with gzip.open(file_path, 'r') as zip_handle:
-        return zip_handle.read()
-
-
-def write_zipped_preset(file_path: str, content: str) -> NoReturn:
-    with gzip.open(file_path, 'wb') as zip_handle:
-        zip_handle.write(content.encode('utf-8'))
-
-
-def vector_from_file(root: str, file_name: str,
-                     target_keys: list = constants.TARGET_KEYS
-                     ) -> (str, np.array):
-    xml_preset = unzip_preset(os.path.join(root, file_name))
-    return xml_preset, vector_from_preset(xml_preset, target_keys)
-
-
-def write_metadata_for_parameter(metadata_for_key, value) -> dict:
-    value_range = extract_range(metadata_for_key)
+def extract_value_from_string(param_value_dict, param_metadata_dict):
+    param_value_dict = extract_number_from_string(param_value_dict)
+    value_range = extract_range(param_metadata_dict)
     if value_range:
-        value = denormalize_parameter(value, value_range)
-        assert value_range[0] <= value <= value_range[1]
+        param_value_dict = normalize_parameter(param_value_dict, value_range)
+    return param_value_dict
 
-    translated_value = write_value_for_parameter(metadata_for_key, value)
-    if metadata_for_key.get('@Value'):
-        metadata_for_key['@Value'] = translated_value
+
+def extract_number_from_string(string):
+    if string == 'true':
+        param_value = 1
+    elif string == 'false':
+        param_value = 0
     else:
-        metadata_for_key['Manual']['@Value'] = translated_value
+        try:
+            param_value = int(string)
+        except ValueError:
+            param_value = float(string)
+    return param_value
 
-    return metadata_for_key
 
-
-def write_value_for_parameter(key, value) -> str:
-    if is_boolean_param(key):
-        return 'true' if value else 'false'
+def extract_range(param):
+    value_range = param.get('MidiControllerRange')
+    if value_range:
+        return extract_number_from_string(value_range['Min']['@Value']), \
+               extract_number_from_string(value_range['Max']['@Value'])
     else:
-        towrite = str(value)
-        if towrite.endswith('.0'):
-            towrite = towrite[:-2]
-        return towrite
+        return None
+
+
+def normalize_parameter(value, range):
+    return (value - range[0]) / (range[1] - range[0])
+
+
+def extract_value_from_string(param_value_dict, param_metadata_dict):
+    param_value_dict = extract_number_from_string(param_value_dict)
+    value_range = extract_range(param_metadata_dict)
+    if value_range:
+        param_value_dict = normalize_parameter(param_value_dict, value_range)
+    return param_value_dict
 
 
 def write_preset_from_vector(vector: np.array, name: str = None,
@@ -159,16 +148,6 @@ def write_preset_from_vector(vector: np.array, name: str = None,
         path = constants.GENERATED_PRESETS_DIR
     xml = generate_xml_from_vector(vector, key_paths, default_dict)
     write_zipped_preset(os.path.join(path, f'{name}.adv'), xml)
-
-
-def is_boolean_param(key):
-    bools = ['ExponentialSlope', 'LFOGateReset', 'FreeRun', 'FilterSlave', 'KeyboardUnison', 'OscillatorMode']
-    if 'Toggle' in key \
-            or 'Legato' in key \
-            or key in bools:
-        return True
-    else:
-        return False
 
 
 def generate_xml_from_vector(vector: list, key_paths: list = None,
@@ -206,31 +185,55 @@ def get_default_preset_dict() -> dict:
         return json.loads(file.read())
 
 
-def write_preset_from_xml(xml_path, target_path):
-    with open(xml_path, 'r') as xml:
-        write_zipped_preset(target_path, xml.read())
+def is_boolean_param(key):
+    bools = ['ExponentialSlope', 'LFOGateReset', 'FreeRun', 'FilterSlave', 'KeyboardUnison', 'OscillatorMode']
+    if 'Toggle' in key \
+            or 'Legato' in key \
+            or key in bools:
+        return True
+    else:
+        return False
 
 
-def read_presets_from_dir(
-        target_path=f'{constants.ANALOG_PRESETS_PATH}',
-        labels=None) -> [str, np.array]:
-    vectors = []
-    label = None
-    for root, dirs, files in os.walk(target_path):
-        if labels:
-            found = False
-            for key in labels:
-                if key in root:
-                    # build one hot vector
-                    found = True
-                    label = int(labels.index(key))
-            if not found:
-                continue
-        vectors += [vector_from_file(root, f, constants.TARGET_KEYS) + (label, )
-                    for f in files if f.endswith('.adv')]
-    return vectors
+def write_metadata_for_parameter(metadata_for_key, value) -> dict:
+    value_range = extract_range(metadata_for_key)
+    if value_range:
+        value = denormalize_parameter(value, value_range)
+        assert value_range[0] <= value <= value_range[1]
+
+    translated_value = write_value_for_parameter(metadata_for_key, value)
+    if metadata_for_key.get('@Value'):
+        metadata_for_key['@Value'] = translated_value
+    else:
+        metadata_for_key['Manual']['@Value'] = translated_value
+
+    return metadata_for_key
+
+
+def denormalize_parameter(value, range):
+    return value * (range[1] - range[0]) + range[0]
+
+
+def write_value_for_parameter(key, value) -> str:
+    if is_boolean_param(key):
+        return 'true' if value else 'false'
+    else:
+        towrite = str(value)
+        if towrite.endswith('.0'):
+            towrite = towrite[:-2]
+        return towrite
+
+
+def write_zipped_preset(file_path: str, content: str) -> NoReturn:
+    with gzip.open(file_path, 'wb') as zip_handle:
+        zip_handle.write(content.encode('utf-8'))
 
 
 def write_xml():
     write_preset_from_xml('//data/AnalogDefaultPreset.xml',
                           f'/Users/vader/Music/Ableton/User Library/Presets/Instruments/Analog/test{uuid.uuid4()}.adv')
+
+
+def write_preset_from_xml(xml_path, target_path):
+    with open(xml_path, 'r') as xml:
+        write_zipped_preset(target_path, xml.read())
