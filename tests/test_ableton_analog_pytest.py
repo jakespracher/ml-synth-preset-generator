@@ -12,5 +12,4 @@ def test_preset_data(request):
 def test_read_rewrite_should_generate_identical_presets(test_preset_data):
     preset, vector, _ = test_preset_data
     xml = ableton_analog.generate_xml_from_vector(vector)
-    import pdb; pdb.set_trace()
     assert xml.encode() == preset
