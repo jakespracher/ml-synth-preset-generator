@@ -1,0 +1,4256 @@
+{
+  "Ableton": {
+    "@MajorVersion": "5",
+    "@MinorVersion": "10.0_377",
+    "@SchemaChangeCount": "2",
+    "@Creator": "Ableton Live 10.1",
+    "@Revision": "820f098a4a1eff42a9be3d90e07536cb8104c459",
+    "UltraAnalog": {
+      "LomId": {
+        "@Value": "0"
+      },
+      "LomIdView": {
+        "@Value": "0"
+      },
+      "IsExpanded": {
+        "@Value": "true"
+      },
+      "On": {
+        "LomId": {
+          "@Value": "0"
+        },
+        "Manual": {
+          "@Value": "true"
+        },
+        "AutomationTarget": {
+          "@Id": "0",
+          "LockEnvelope": {
+            "@Value": "0"
+          }
+        },
+        "MidiCCOnOffThresholds": {
+          "Min": {
+            "@Value": "64"
+          },
+          "Max": {
+            "@Value": "127"
+          }
+        }
+      },
+      "ParametersListWrapper": {
+        "@LomId": "0"
+      },
+      "LastSelectedTimeableIndex": {
+        "@Value": "0"
+      },
+      "LastSelectedClipEnvelopeIndex": {
+        "@Value": "0"
+      },
+      "LastPresetRef": {
+        "Value": {
+          "AbletonDefaultPresetRef": {
+            "@Id": "0",
+            "FileRef": {
+              "HasRelativePath": {
+                "@Value": "true"
+              },
+              "RelativePathType": {
+                "@Value": "5"
+              },
+              "RelativePath": {
+                "RelativePathElement": [
+                  {
+                    "@Id": "0",
+                    "@Dir": "Devices"
+                  },
+                  {
+                    "@Id": "1",
+                    "@Dir": "Instruments"
+                  },
+                  {
+                    "@Id": "2",
+                    "@Dir": "Analog"
+                  }
+                ]
+              },
+              "Name": {
+                "@Value": ""
+              },
+              "Type": {
+                "@Value": "2"
+              },
+              "Data": "0000000001B6000200010C4D6163696E746F73682048440000000000000000000000000000000000\n\t\t\t\t\t\t\t000042440001FFFFFFFF06416E616C6F670000000000000000000000000000000000000000000000\n\t\t\t\t\t\t\t00000000000000000000000000000000000000000000000000000000000000000000FFFFFFFF0000\n\t\t\t\t\t\t\t00000000000000000000FFFFFFFF00000A206375000000000000000000000000000B496E73747275\n\t\t\t\t\t\t\t6D656E747300000200682F3A4170706C69636174696F6E733A41626C65746F6E204C697665203130\n\t\t\t\t\t\t\t2053756974652E6170703A436F6E74656E74733A4170702D5265736F75726365733A436F7265204C\n\t\t\t\t\t\t\t6962726172793A446576696365733A496E737472756D656E74733A416E616C6F672F000E000E0006\n\t\t\t\t\t\t\t0041006E0061006C006F0067000F001A000C004D006100630069006E0074006F0073006800200048\n\t\t\t\t\t\t\t0044001200654170706C69636174696F6E732F41626C65746F6E204C697665203130205375697465\n\t\t\t\t\t\t\t2E6170702F436F6E74656E74732F4170702D5265736F75726365732F436F7265204C696272617279\n\t\t\t\t\t\t\t2F446576696365732F496E737472756D656E74732F416E616C6F6700001300012F00FFFF0000",
+              "RefersToFolder": {
+                "@Value": "true"
+              },
+              "SearchHint": {
+                "PathHint": null,
+                "FileSize": {
+                  "@Value": "0"
+                },
+                "Crc": {
+                  "@Value": "0"
+                },
+                "MaxCrcSize": {
+                  "@Value": "0"
+                },
+                "HasExtendedInfo": {
+                  "@Value": "false"
+                }
+              },
+              "LivePackName": {
+                "@Value": "Core Library"
+              },
+              "LivePackId": {
+                "@Value": "www.ableton.com/0"
+              }
+            },
+            "DeviceId": {
+              "@Name": "UltraAnalog"
+            }
+          }
+        }
+      },
+      "LockedScripts": null,
+      "IsFolded": {
+        "@Value": "false"
+      },
+      "ShouldShowPresetName": {
+        "@Value": "true"
+      },
+      "UserName": {
+        "@Value": ""
+      },
+      "Annotation": {
+        "@Value": ""
+      },
+      "SourceContext": {
+        "Value": null
+      },
+      "OverwriteProtectionNumber": {
+        "@Value": "2561"
+      },
+      "Polyphony": {
+        "LomId": {
+          "@Value": "0"
+        },
+        "Manual": {
+          "@Value": "3"
+        },
+        "AutomationTarget": {
+          "@Id": "0",
+          "LockEnvelope": {
+            "@Value": "0"
+          }
+        }
+      },
+      "PitchBendRange": {
+        "LomId": {
+          "@Value": "0"
+        },
+        "Manual": {
+          "@Value": "0.1666666716"
+        },
+        "MidiControllerRange": {
+          "Min": {
+            "@Value": "0"
+          },
+          "Max": {
+            "@Value": "1"
+          }
+        },
+        "AutomationTarget": {
+          "@Id": "0",
+          "LockEnvelope": {
+            "@Value": "0"
+          }
+        },
+        "ModulationTarget": {
+          "@Id": "0",
+          "LockEnvelope": {
+            "@Value": "0"
+          }
+        }
+      },
+      "Volume": {
+        "LomId": {
+          "@Value": "0"
+        },
+        "Manual": {
+          "@Value": "0.7047889829"
+        },
+        "MidiControllerRange": {
+          "Min": {
+            "@Value": "0"
+          },
+          "Max": {
+            "@Value": "1"
+          }
+        },
+        "AutomationTarget": {
+          "@Id": "0",
+          "LockEnvelope": {
+            "@Value": "0"
+          }
+        },
+        "ModulationTarget": {
+          "@Id": "0",
+          "LockEnvelope": {
+            "@Value": "0"
+          }
+        }
+      },
+      "Octave": {
+        "LomId": {
+          "@Value": "0"
+        },
+        "Manual": {
+          "@Value": "0"
+        },
+        "MidiControllerRange": {
+          "Min": {
+            "@Value": "-3"
+          },
+          "Max": {
+            "@Value": "3"
+          }
+        },
+        "AutomationTarget": {
+          "@Id": "0",
+          "LockEnvelope": {
+            "@Value": "0"
+          }
+        },
+        "ModulationTarget": {
+          "@Id": "0",
+          "LockEnvelope": {
+            "@Value": "0"
+          }
+        }
+      },
+      "OctaveRelativePosition": {
+        "@Value": "-1073741824"
+      },
+      "Transpose": {
+        "LomId": {
+          "@Value": "0"
+        },
+        "Manual": {
+          "@Value": "0"
+        },
+        "MidiControllerRange": {
+          "Min": {
+            "@Value": "-12"
+          },
+          "Max": {
+            "@Value": "12"
+          }
+        },
+        "AutomationTarget": {
+          "@Id": "0",
+          "LockEnvelope": {
+            "@Value": "0"
+          }
+        },
+        "ModulationTarget": {
+          "@Id": "0",
+          "LockEnvelope": {
+            "@Value": "0"
+          }
+        }
+      },
+      "TransposeRelativePosition": {
+        "@Value": "-1073741824"
+      },
+      "KeyboardFineTune": {
+        "LomId": {
+          "@Value": "0"
+        },
+        "Manual": {
+          "@Value": "0.5"
+        },
+        "MidiControllerRange": {
+          "Min": {
+            "@Value": "0"
+          },
+          "Max": {
+            "@Value": "1"
+          }
+        },
+        "AutomationTarget": {
+          "@Id": "0",
+          "LockEnvelope": {
+            "@Value": "0"
+          }
+        },
+        "ModulationTarget": {
+          "@Id": "0",
+          "LockEnvelope": {
+            "@Value": "0"
+          }
+        }
+      },
+      "KeyboardUnisonToggle": {
+        "LomId": {
+          "@Value": "0"
+        },
+        "Manual": {
+          "@Value": "false"
+        },
+        "AutomationTarget": {
+          "@Id": "0",
+          "LockEnvelope": {
+            "@Value": "0"
+          }
+        },
+        "MidiCCOnOffThresholds": {
+          "Min": {
+            "@Value": "64"
+          },
+          "Max": {
+            "@Value": "127"
+          }
+        }
+      },
+      "KeyboardUnison": {
+        "LomId": {
+          "@Value": "0"
+        },
+        "Manual": {
+          "@Value": "0"
+        },
+        "AutomationTarget": {
+          "@Id": "0",
+          "LockEnvelope": {
+            "@Value": "0"
+          }
+        }
+      },
+      "KeyboardDetune": {
+        "LomId": {
+          "@Value": "0"
+        },
+        "Manual": {
+          "@Value": "0"
+        },
+        "MidiControllerRange": {
+          "Min": {
+            "@Value": "0"
+          },
+          "Max": {
+            "@Value": "1"
+          }
+        },
+        "AutomationTarget": {
+          "@Id": "0",
+          "LockEnvelope": {
+            "@Value": "0"
+          }
+        },
+        "ModulationTarget": {
+          "@Id": "0",
+          "LockEnvelope": {
+            "@Value": "0"
+          }
+        }
+      },
+      "KeyboardUnisonDelay": {
+        "LomId": {
+          "@Value": "0"
+        },
+        "Manual": {
+          "@Value": "0"
+        },
+        "MidiControllerRange": {
+          "Min": {
+            "@Value": "0"
+          },
+          "Max": {
+            "@Value": "1"
+          }
+        },
+        "AutomationTarget": {
+          "@Id": "0",
+          "LockEnvelope": {
+            "@Value": "0"
+          }
+        },
+        "ModulationTarget": {
+          "@Id": "0",
+          "LockEnvelope": {
+            "@Value": "0"
+          }
+        }
+      },
+      "KeyboardPriority": {
+        "LomId": {
+          "@Value": "0"
+        },
+        "Manual": {
+          "@Value": "2"
+        },
+        "AutomationTarget": {
+          "@Id": "0",
+          "LockEnvelope": {
+            "@Value": "0"
+          }
+        }
+      },
+      "KeyboardStretch": {
+        "LomId": {
+          "@Value": "0"
+        },
+        "Manual": {
+          "@Value": "0.5"
+        },
+        "MidiControllerRange": {
+          "Min": {
+            "@Value": "0"
+          },
+          "Max": {
+            "@Value": "1"
+          }
+        },
+        "AutomationTarget": {
+          "@Id": "0",
+          "LockEnvelope": {
+            "@Value": "0"
+          }
+        },
+        "ModulationTarget": {
+          "@Id": "0",
+          "LockEnvelope": {
+            "@Value": "0"
+          }
+        }
+      },
+      "KeyboardError": {
+        "LomId": {
+          "@Value": "0"
+        },
+        "Manual": {
+          "@Value": "0"
+        },
+        "MidiControllerRange": {
+          "Min": {
+            "@Value": "0"
+          },
+          "Max": {
+            "@Value": "1"
+          }
+        },
+        "AutomationTarget": {
+          "@Id": "0",
+          "LockEnvelope": {
+            "@Value": "0"
+          }
+        },
+        "ModulationTarget": {
+          "@Id": "0",
+          "LockEnvelope": {
+            "@Value": "0"
+          }
+        }
+      },
+      "VibratoToggle": {
+        "LomId": {
+          "@Value": "0"
+        },
+        "Manual": {
+          "@Value": "false"
+        },
+        "AutomationTarget": {
+          "@Id": "0",
+          "LockEnvelope": {
+            "@Value": "0"
+          }
+        },
+        "MidiCCOnOffThresholds": {
+          "Min": {
+            "@Value": "64"
+          },
+          "Max": {
+            "@Value": "127"
+          }
+        }
+      },
+      "VibratoSpeed": {
+        "LomId": {
+          "@Value": "0"
+        },
+        "Manual": {
+          "@Value": "0.5"
+        },
+        "MidiControllerRange": {
+          "Min": {
+            "@Value": "0"
+          },
+          "Max": {
+            "@Value": "1"
+          }
+        },
+        "AutomationTarget": {
+          "@Id": "0",
+          "LockEnvelope": {
+            "@Value": "0"
+          }
+        },
+        "ModulationTarget": {
+          "@Id": "0",
+          "LockEnvelope": {
+            "@Value": "0"
+          }
+        }
+      },
+      "VibratoFadeIn": {
+        "LomId": {
+          "@Value": "0"
+        },
+        "Manual": {
+          "@Value": "0"
+        },
+        "MidiControllerRange": {
+          "Min": {
+            "@Value": "0"
+          },
+          "Max": {
+            "@Value": "1"
+          }
+        },
+        "AutomationTarget": {
+          "@Id": "0",
+          "LockEnvelope": {
+            "@Value": "0"
+          }
+        },
+        "ModulationTarget": {
+          "@Id": "0",
+          "LockEnvelope": {
+            "@Value": "0"
+          }
+        }
+      },
+      "VibratoAmount": {
+        "LomId": {
+          "@Value": "0"
+        },
+        "Manual": {
+          "@Value": "0"
+        },
+        "MidiControllerRange": {
+          "Min": {
+            "@Value": "0"
+          },
+          "Max": {
+            "@Value": "1"
+          }
+        },
+        "AutomationTarget": {
+          "@Id": "0",
+          "LockEnvelope": {
+            "@Value": "0"
+          }
+        },
+        "ModulationTarget": {
+          "@Id": "0",
+          "LockEnvelope": {
+            "@Value": "0"
+          }
+        }
+      },
+      "VibratoError": {
+        "LomId": {
+          "@Value": "0"
+        },
+        "Manual": {
+          "@Value": "0"
+        },
+        "MidiControllerRange": {
+          "Min": {
+            "@Value": "0"
+          },
+          "Max": {
+            "@Value": "1"
+          }
+        },
+        "AutomationTarget": {
+          "@Id": "0",
+          "LockEnvelope": {
+            "@Value": "0"
+          }
+        },
+        "ModulationTarget": {
+          "@Id": "0",
+          "LockEnvelope": {
+            "@Value": "0"
+          }
+        }
+      },
+      "VibratoDelay": {
+        "LomId": {
+          "@Value": "0"
+        },
+        "Manual": {
+          "@Value": "0"
+        },
+        "MidiControllerRange": {
+          "Min": {
+            "@Value": "0"
+          },
+          "Max": {
+            "@Value": "1"
+          }
+        },
+        "AutomationTarget": {
+          "@Id": "0",
+          "LockEnvelope": {
+            "@Value": "0"
+          }
+        },
+        "ModulationTarget": {
+          "@Id": "0",
+          "LockEnvelope": {
+            "@Value": "0"
+          }
+        }
+      },
+      "VibratoModWheel": {
+        "LomId": {
+          "@Value": "0"
+        },
+        "Manual": {
+          "@Value": "0"
+        },
+        "MidiControllerRange": {
+          "Min": {
+            "@Value": "0"
+          },
+          "Max": {
+            "@Value": "1"
+          }
+        },
+        "AutomationTarget": {
+          "@Id": "0",
+          "LockEnvelope": {
+            "@Value": "0"
+          }
+        },
+        "ModulationTarget": {
+          "@Id": "0",
+          "LockEnvelope": {
+            "@Value": "0"
+          }
+        }
+      },
+      "PortamentoToggle": {
+        "LomId": {
+          "@Value": "0"
+        },
+        "Manual": {
+          "@Value": "false"
+        },
+        "AutomationTarget": {
+          "@Id": "0",
+          "LockEnvelope": {
+            "@Value": "0"
+          }
+        },
+        "MidiCCOnOffThresholds": {
+          "Min": {
+            "@Value": "64"
+          },
+          "Max": {
+            "@Value": "127"
+          }
+        }
+      },
+      "PortamentoTime": {
+        "LomId": {
+          "@Value": "0"
+        },
+        "Manual": {
+          "@Value": "0.5"
+        },
+        "MidiControllerRange": {
+          "Min": {
+            "@Value": "0"
+          },
+          "Max": {
+            "@Value": "1"
+          }
+        },
+        "AutomationTarget": {
+          "@Id": "0",
+          "LockEnvelope": {
+            "@Value": "0"
+          }
+        },
+        "ModulationTarget": {
+          "@Id": "0",
+          "LockEnvelope": {
+            "@Value": "0"
+          }
+        }
+      },
+      "PortamentoMode": {
+        "LomId": {
+          "@Value": "0"
+        },
+        "Manual": {
+          "@Value": "0"
+        },
+        "AutomationTarget": {
+          "@Id": "0",
+          "LockEnvelope": {
+            "@Value": "0"
+          }
+        }
+      },
+      "PortamentoLegato": {
+        "LomId": {
+          "@Value": "0"
+        },
+        "Manual": {
+          "@Value": "false"
+        },
+        "AutomationTarget": {
+          "@Id": "0",
+          "LockEnvelope": {
+            "@Value": "0"
+          }
+        },
+        "MidiCCOnOffThresholds": {
+          "Min": {
+            "@Value": "64"
+          },
+          "Max": {
+            "@Value": "127"
+          }
+        }
+      },
+      "NoiseToggle": {
+        "LomId": {
+          "@Value": "0"
+        },
+        "Manual": {
+          "@Value": "false"
+        },
+        "AutomationTarget": {
+          "@Id": "0",
+          "LockEnvelope": {
+            "@Value": "0"
+          }
+        },
+        "MidiCCOnOffThresholds": {
+          "Min": {
+            "@Value": "64"
+          },
+          "Max": {
+            "@Value": "127"
+          }
+        }
+      },
+      "NoiseColor": {
+        "LomId": {
+          "@Value": "0"
+        },
+        "Manual": {
+          "@Value": "0.5"
+        },
+        "MidiControllerRange": {
+          "Min": {
+            "@Value": "0"
+          },
+          "Max": {
+            "@Value": "1"
+          }
+        },
+        "AutomationTarget": {
+          "@Id": "0",
+          "LockEnvelope": {
+            "@Value": "0"
+          }
+        },
+        "ModulationTarget": {
+          "@Id": "0",
+          "LockEnvelope": {
+            "@Value": "0"
+          }
+        }
+      },
+      "NoiseBalance": {
+        "LomId": {
+          "@Value": "0"
+        },
+        "Manual": {
+          "@Value": "1"
+        },
+        "MidiControllerRange": {
+          "Min": {
+            "@Value": "0"
+          },
+          "Max": {
+            "@Value": "1"
+          }
+        },
+        "AutomationTarget": {
+          "@Id": "0",
+          "LockEnvelope": {
+            "@Value": "0"
+          }
+        },
+        "ModulationTarget": {
+          "@Id": "0",
+          "LockEnvelope": {
+            "@Value": "0"
+          }
+        }
+      },
+      "NoiseLevel": {
+        "LomId": {
+          "@Value": "0"
+        },
+        "Manual": {
+          "@Value": "0.8062000275"
+        },
+        "MidiControllerRange": {
+          "Min": {
+            "@Value": "0"
+          },
+          "Max": {
+            "@Value": "1"
+          }
+        },
+        "AutomationTarget": {
+          "@Id": "0",
+          "LockEnvelope": {
+            "@Value": "0"
+          }
+        },
+        "ModulationTarget": {
+          "@Id": "0",
+          "LockEnvelope": {
+            "@Value": "0"
+          }
+        }
+      },
+      "SignalChain1": {
+        "OscillatorToggle": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "true"
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "MidiCCOnOffThresholds": {
+            "Min": {
+              "@Value": "64"
+            },
+            "Max": {
+              "@Value": "127"
+            }
+          }
+        },
+        "OscillatorWaveShape": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "1"
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "OscillatorOct": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "-3"
+            },
+            "Max": {
+              "@Value": "3"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "OscillatorOctRelativePosition": {
+          "@Value": "-1073741824"
+        },
+        "OscillatorSemi": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "-12"
+            },
+            "Max": {
+              "@Value": "12"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "OscillatorSemiRelativePosition": {
+          "@Value": "-1073741824"
+        },
+        "OscillatorMode": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0"
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "OscillatorEnvTime": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0.5"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "0"
+            },
+            "Max": {
+              "@Value": "1"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "OscillatorDetune": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0.5"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "0"
+            },
+            "Max": {
+              "@Value": "1"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "OscillatorModulation1": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0.5"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "0"
+            },
+            "Max": {
+              "@Value": "1"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "OscillatorPulseWidth": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0.5"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "0"
+            },
+            "Max": {
+              "@Value": "1"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "OscillatorSubAmount": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "0"
+            },
+            "Max": {
+              "@Value": "1"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "OscillatorBalance": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "1"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "0"
+            },
+            "Max": {
+              "@Value": "1"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "OscillatorEnvAmount": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "-1"
+            },
+            "Max": {
+              "@Value": "1"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "OscillatorLFOModPitch": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "-1"
+            },
+            "Max": {
+              "@Value": "1"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "OscillatorLFOModPW": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "-1"
+            },
+            "Max": {
+              "@Value": "1"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "OscillatorLevel": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0.8062000275"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "0"
+            },
+            "Max": {
+              "@Value": "1"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "FilterToggle": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "true"
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "MidiCCOnOffThresholds": {
+            "Min": {
+              "@Value": "64"
+            },
+            "Max": {
+              "@Value": "127"
+            }
+          }
+        },
+        "FilterType": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "1"
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "FilterDrive": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "1"
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "FilterKbdCutoffMod": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "-1"
+            },
+            "Max": {
+              "@Value": "1"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "FilterCutoffFrequency": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "1"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "0"
+            },
+            "Max": {
+              "@Value": "1"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "FilterKbdQMod": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "-1"
+            },
+            "Max": {
+              "@Value": "1"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "FilterQFactor": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "0"
+            },
+            "Max": {
+              "@Value": "1"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "FilterLFOCutoffMod": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "-1"
+            },
+            "Max": {
+              "@Value": "1"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "FilterEnvCutoffMod": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0.7047610879"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "-1"
+            },
+            "Max": {
+              "@Value": "1"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "FilterLFOQMod": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "-1"
+            },
+            "Max": {
+              "@Value": "1"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "FilterEnvQMod": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "-1"
+            },
+            "Max": {
+              "@Value": "1"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "AmplifierToggle": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "true"
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "MidiCCOnOffThresholds": {
+            "Min": {
+              "@Value": "64"
+            },
+            "Max": {
+              "@Value": "127"
+            }
+          }
+        },
+        "AmplifierKbdAmpMod": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "-1"
+            },
+            "Max": {
+              "@Value": "1"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "AmplifierLevel": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0.474311769"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "0"
+            },
+            "Max": {
+              "@Value": "1"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "AmplifierKbdPanMod": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "-1"
+            },
+            "Max": {
+              "@Value": "1"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "AmplifierPan": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0.5"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "0"
+            },
+            "Max": {
+              "@Value": "1"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "AmplifierLFOAmpMod": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "-1"
+            },
+            "Max": {
+              "@Value": "1"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "AmplifierLFOPanMod": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "-1"
+            },
+            "Max": {
+              "@Value": "1"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "AmplifierEnvPanMod": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "-1"
+            },
+            "Max": {
+              "@Value": "1"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "LFOToggle": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "false"
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "MidiCCOnOffThresholds": {
+            "Min": {
+              "@Value": "64"
+            },
+            "Max": {
+              "@Value": "127"
+            }
+          }
+        },
+        "LFOWaveShape": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0"
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "LFOSync": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "13"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "0"
+            },
+            "Max": {
+              "@Value": "23"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "LFOSyncToggle": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0"
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "LFOGateReset": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "false"
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "MidiCCOnOffThresholds": {
+            "Min": {
+              "@Value": "64"
+            },
+            "Max": {
+              "@Value": "127"
+            }
+          }
+        },
+        "LFOPulseWidth": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0.5"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "0"
+            },
+            "Max": {
+              "@Value": "1"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "LFOSpeed": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0.5"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "0"
+            },
+            "Max": {
+              "@Value": "1"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "LFOPhase": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "0"
+            },
+            "Max": {
+              "@Value": "1"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "LFODelay": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "0"
+            },
+            "Max": {
+              "@Value": "1"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "LFOFadeIn": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "0"
+            },
+            "Max": {
+              "@Value": "1"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "Envelope.0": {
+          "ExponentialSlope": {
+            "LomId": {
+              "@Value": "0"
+            },
+            "Manual": {
+              "@Value": "true"
+            },
+            "AutomationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            },
+            "MidiCCOnOffThresholds": {
+              "Min": {
+                "@Value": "64"
+              },
+              "Max": {
+                "@Value": "127"
+              }
+            }
+          },
+          "Loop": {
+            "LomId": {
+              "@Value": "0"
+            },
+            "Manual": {
+              "@Value": "0"
+            },
+            "AutomationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            }
+          },
+          "FreeRun": {
+            "LomId": {
+              "@Value": "0"
+            },
+            "Manual": {
+              "@Value": "false"
+            },
+            "AutomationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            },
+            "MidiCCOnOffThresholds": {
+              "Min": {
+                "@Value": "64"
+              },
+              "Max": {
+                "@Value": "127"
+              }
+            }
+          },
+          "Legato": {
+            "LomId": {
+              "@Value": "0"
+            },
+            "Manual": {
+              "@Value": "false"
+            },
+            "AutomationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            },
+            "MidiCCOnOffThresholds": {
+              "Min": {
+                "@Value": "64"
+              },
+              "Max": {
+                "@Value": "127"
+              }
+            }
+          },
+          "AttackMod": {
+            "LomId": {
+              "@Value": "0"
+            },
+            "Manual": {
+              "@Value": "0"
+            },
+            "MidiControllerRange": {
+              "Min": {
+                "@Value": "0"
+              },
+              "Max": {
+                "@Value": "1"
+              }
+            },
+            "AutomationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            },
+            "ModulationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            }
+          },
+          "AttackTime": {
+            "LomId": {
+              "@Value": "0"
+            },
+            "Manual": {
+              "@Value": "0"
+            },
+            "MidiControllerRange": {
+              "Min": {
+                "@Value": "0"
+              },
+              "Max": {
+                "@Value": "1"
+              }
+            },
+            "AutomationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            },
+            "ModulationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            }
+          },
+          "DecayTime": {
+            "LomId": {
+              "@Value": "0"
+            },
+            "Manual": {
+              "@Value": "0.6000000238"
+            },
+            "MidiControllerRange": {
+              "Min": {
+                "@Value": "0"
+              },
+              "Max": {
+                "@Value": "1"
+              }
+            },
+            "AutomationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            },
+            "ModulationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            }
+          },
+          "AmpMod": {
+            "LomId": {
+              "@Value": "0"
+            },
+            "Manual": {
+              "@Value": "0"
+            },
+            "MidiControllerRange": {
+              "Min": {
+                "@Value": "0"
+              },
+              "Max": {
+                "@Value": "1"
+              }
+            },
+            "AutomationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            },
+            "ModulationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            }
+          },
+          "SustainLevel": {
+            "LomId": {
+              "@Value": "0"
+            },
+            "Manual": {
+              "@Value": "0.5"
+            },
+            "MidiControllerRange": {
+              "Min": {
+                "@Value": "0"
+              },
+              "Max": {
+                "@Value": "1"
+              }
+            },
+            "AutomationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            },
+            "ModulationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            }
+          },
+          "SustainTime": {
+            "LomId": {
+              "@Value": "0"
+            },
+            "Manual": {
+              "@Value": "1"
+            },
+            "MidiControllerRange": {
+              "Min": {
+                "@Value": "0"
+              },
+              "Max": {
+                "@Value": "1"
+              }
+            },
+            "AutomationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            },
+            "ModulationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            }
+          },
+          "ReleaseTime": {
+            "LomId": {
+              "@Value": "0"
+            },
+            "Manual": {
+              "@Value": "0.4847841263"
+            },
+            "MidiControllerRange": {
+              "Min": {
+                "@Value": "0"
+              },
+              "Max": {
+                "@Value": "1"
+              }
+            },
+            "AutomationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            },
+            "ModulationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            }
+          }
+        },
+        "Envelope.1": {
+          "ExponentialSlope": {
+            "LomId": {
+              "@Value": "0"
+            },
+            "Manual": {
+              "@Value": "true"
+            },
+            "AutomationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            },
+            "MidiCCOnOffThresholds": {
+              "Min": {
+                "@Value": "64"
+              },
+              "Max": {
+                "@Value": "127"
+              }
+            }
+          },
+          "Loop": {
+            "LomId": {
+              "@Value": "0"
+            },
+            "Manual": {
+              "@Value": "0"
+            },
+            "AutomationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            }
+          },
+          "FreeRun": {
+            "LomId": {
+              "@Value": "0"
+            },
+            "Manual": {
+              "@Value": "false"
+            },
+            "AutomationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            },
+            "MidiCCOnOffThresholds": {
+              "Min": {
+                "@Value": "64"
+              },
+              "Max": {
+                "@Value": "127"
+              }
+            }
+          },
+          "Legato": {
+            "LomId": {
+              "@Value": "0"
+            },
+            "Manual": {
+              "@Value": "false"
+            },
+            "AutomationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            },
+            "MidiCCOnOffThresholds": {
+              "Min": {
+                "@Value": "64"
+              },
+              "Max": {
+                "@Value": "127"
+              }
+            }
+          },
+          "AttackMod": {
+            "LomId": {
+              "@Value": "0"
+            },
+            "Manual": {
+              "@Value": "0"
+            },
+            "MidiControllerRange": {
+              "Min": {
+                "@Value": "0"
+              },
+              "Max": {
+                "@Value": "1"
+              }
+            },
+            "AutomationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            },
+            "ModulationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            }
+          },
+          "AttackTime": {
+            "LomId": {
+              "@Value": "0"
+            },
+            "Manual": {
+              "@Value": "0"
+            },
+            "MidiControllerRange": {
+              "Min": {
+                "@Value": "0"
+              },
+              "Max": {
+                "@Value": "1"
+              }
+            },
+            "AutomationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            },
+            "ModulationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            }
+          },
+          "DecayTime": {
+            "LomId": {
+              "@Value": "0"
+            },
+            "Manual": {
+              "@Value": "0.6000000238"
+            },
+            "MidiControllerRange": {
+              "Min": {
+                "@Value": "0"
+              },
+              "Max": {
+                "@Value": "1"
+              }
+            },
+            "AutomationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            },
+            "ModulationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            }
+          },
+          "AmpMod": {
+            "LomId": {
+              "@Value": "0"
+            },
+            "Manual": {
+              "@Value": "0.5"
+            },
+            "MidiControllerRange": {
+              "Min": {
+                "@Value": "0"
+              },
+              "Max": {
+                "@Value": "1"
+              }
+            },
+            "AutomationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            },
+            "ModulationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            }
+          },
+          "SustainLevel": {
+            "LomId": {
+              "@Value": "0"
+            },
+            "Manual": {
+              "@Value": "0.5"
+            },
+            "MidiControllerRange": {
+              "Min": {
+                "@Value": "0"
+              },
+              "Max": {
+                "@Value": "1"
+              }
+            },
+            "AutomationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            },
+            "ModulationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            }
+          },
+          "SustainTime": {
+            "LomId": {
+              "@Value": "0"
+            },
+            "Manual": {
+              "@Value": "1"
+            },
+            "MidiControllerRange": {
+              "Min": {
+                "@Value": "0"
+              },
+              "Max": {
+                "@Value": "1"
+              }
+            },
+            "AutomationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            },
+            "ModulationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            }
+          },
+          "ReleaseTime": {
+            "LomId": {
+              "@Value": "0"
+            },
+            "Manual": {
+              "@Value": "0.5718053579"
+            },
+            "MidiControllerRange": {
+              "Min": {
+                "@Value": "0"
+              },
+              "Max": {
+                "@Value": "1"
+              }
+            },
+            "AutomationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            },
+            "ModulationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            }
+          }
+        },
+        "FilterToFilter2": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "1"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "0"
+            },
+            "Max": {
+              "@Value": "1"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        }
+      },
+      "SignalChain2": {
+        "OscillatorToggle": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "true"
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "MidiCCOnOffThresholds": {
+            "Min": {
+              "@Value": "64"
+            },
+            "Max": {
+              "@Value": "127"
+            }
+          }
+        },
+        "OscillatorWaveShape": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "1"
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "OscillatorOct": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "-3"
+            },
+            "Max": {
+              "@Value": "3"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "OscillatorOctRelativePosition": {
+          "@Value": "-1073741824"
+        },
+        "OscillatorSemi": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "-12"
+            },
+            "Max": {
+              "@Value": "12"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "OscillatorSemiRelativePosition": {
+          "@Value": "-1073741824"
+        },
+        "OscillatorMode": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0"
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "OscillatorEnvTime": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0.5"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "0"
+            },
+            "Max": {
+              "@Value": "1"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "OscillatorDetune": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0.5"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "0"
+            },
+            "Max": {
+              "@Value": "1"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "OscillatorModulation1": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0.5"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "0"
+            },
+            "Max": {
+              "@Value": "1"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "OscillatorPulseWidth": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0.5"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "0"
+            },
+            "Max": {
+              "@Value": "1"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "OscillatorSubAmount": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "0"
+            },
+            "Max": {
+              "@Value": "1"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "OscillatorBalance": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "1"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "0"
+            },
+            "Max": {
+              "@Value": "1"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "OscillatorEnvAmount": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "-1"
+            },
+            "Max": {
+              "@Value": "1"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "OscillatorLFOModPitch": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "-1"
+            },
+            "Max": {
+              "@Value": "1"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "OscillatorLFOModPW": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "-1"
+            },
+            "Max": {
+              "@Value": "1"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "OscillatorLevel": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0.8062000275"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "0"
+            },
+            "Max": {
+              "@Value": "1"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "FilterToggle": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "false"
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "MidiCCOnOffThresholds": {
+            "Min": {
+              "@Value": "64"
+            },
+            "Max": {
+              "@Value": "127"
+            }
+          }
+        },
+        "FilterType": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0"
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "FilterDrive": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "1"
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "FilterKbdCutoffMod": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "-1"
+            },
+            "Max": {
+              "@Value": "1"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "FilterCutoffFrequency": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "1"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "0"
+            },
+            "Max": {
+              "@Value": "1"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "FilterKbdQMod": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "-1"
+            },
+            "Max": {
+              "@Value": "1"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "FilterQFactor": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "0"
+            },
+            "Max": {
+              "@Value": "1"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "FilterLFOCutoffMod": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "-1"
+            },
+            "Max": {
+              "@Value": "1"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "FilterEnvCutoffMod": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0.7047610879"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "-1"
+            },
+            "Max": {
+              "@Value": "1"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "FilterLFOQMod": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "-1"
+            },
+            "Max": {
+              "@Value": "1"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "FilterEnvQMod": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "-1"
+            },
+            "Max": {
+              "@Value": "1"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "AmplifierToggle": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "false"
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "MidiCCOnOffThresholds": {
+            "Min": {
+              "@Value": "64"
+            },
+            "Max": {
+              "@Value": "127"
+            }
+          }
+        },
+        "AmplifierKbdAmpMod": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "-1"
+            },
+            "Max": {
+              "@Value": "1"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "AmplifierLevel": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0.474311769"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "0"
+            },
+            "Max": {
+              "@Value": "1"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "AmplifierKbdPanMod": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "-1"
+            },
+            "Max": {
+              "@Value": "1"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "AmplifierPan": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0.5"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "0"
+            },
+            "Max": {
+              "@Value": "1"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "AmplifierLFOAmpMod": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "-1"
+            },
+            "Max": {
+              "@Value": "1"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "AmplifierLFOPanMod": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "-1"
+            },
+            "Max": {
+              "@Value": "1"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "AmplifierEnvPanMod": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "-1"
+            },
+            "Max": {
+              "@Value": "1"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "LFOToggle": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "false"
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "MidiCCOnOffThresholds": {
+            "Min": {
+              "@Value": "64"
+            },
+            "Max": {
+              "@Value": "127"
+            }
+          }
+        },
+        "LFOWaveShape": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0"
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "LFOSync": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "13"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "0"
+            },
+            "Max": {
+              "@Value": "23"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "LFOSyncToggle": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0"
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "LFOGateReset": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "false"
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "MidiCCOnOffThresholds": {
+            "Min": {
+              "@Value": "64"
+            },
+            "Max": {
+              "@Value": "127"
+            }
+          }
+        },
+        "LFOPulseWidth": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0.5"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "0"
+            },
+            "Max": {
+              "@Value": "1"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "LFOSpeed": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0.5"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "0"
+            },
+            "Max": {
+              "@Value": "1"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "LFOPhase": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "0"
+            },
+            "Max": {
+              "@Value": "1"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "LFODelay": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "0"
+            },
+            "Max": {
+              "@Value": "1"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "LFOFadeIn": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "0"
+          },
+          "MidiControllerRange": {
+            "Min": {
+              "@Value": "0"
+            },
+            "Max": {
+              "@Value": "1"
+            }
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "ModulationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          }
+        },
+        "Envelope.0": {
+          "ExponentialSlope": {
+            "LomId": {
+              "@Value": "0"
+            },
+            "Manual": {
+              "@Value": "true"
+            },
+            "AutomationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            },
+            "MidiCCOnOffThresholds": {
+              "Min": {
+                "@Value": "64"
+              },
+              "Max": {
+                "@Value": "127"
+              }
+            }
+          },
+          "Loop": {
+            "LomId": {
+              "@Value": "0"
+            },
+            "Manual": {
+              "@Value": "0"
+            },
+            "AutomationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            }
+          },
+          "FreeRun": {
+            "LomId": {
+              "@Value": "0"
+            },
+            "Manual": {
+              "@Value": "false"
+            },
+            "AutomationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            },
+            "MidiCCOnOffThresholds": {
+              "Min": {
+                "@Value": "64"
+              },
+              "Max": {
+                "@Value": "127"
+              }
+            }
+          },
+          "Legato": {
+            "LomId": {
+              "@Value": "0"
+            },
+            "Manual": {
+              "@Value": "false"
+            },
+            "AutomationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            },
+            "MidiCCOnOffThresholds": {
+              "Min": {
+                "@Value": "64"
+              },
+              "Max": {
+                "@Value": "127"
+              }
+            }
+          },
+          "AttackMod": {
+            "LomId": {
+              "@Value": "0"
+            },
+            "Manual": {
+              "@Value": "0"
+            },
+            "MidiControllerRange": {
+              "Min": {
+                "@Value": "0"
+              },
+              "Max": {
+                "@Value": "1"
+              }
+            },
+            "AutomationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            },
+            "ModulationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            }
+          },
+          "AttackTime": {
+            "LomId": {
+              "@Value": "0"
+            },
+            "Manual": {
+              "@Value": "0"
+            },
+            "MidiControllerRange": {
+              "Min": {
+                "@Value": "0"
+              },
+              "Max": {
+                "@Value": "1"
+              }
+            },
+            "AutomationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            },
+            "ModulationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            }
+          },
+          "DecayTime": {
+            "LomId": {
+              "@Value": "0"
+            },
+            "Manual": {
+              "@Value": "0.6000000238"
+            },
+            "MidiControllerRange": {
+              "Min": {
+                "@Value": "0"
+              },
+              "Max": {
+                "@Value": "1"
+              }
+            },
+            "AutomationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            },
+            "ModulationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            }
+          },
+          "AmpMod": {
+            "LomId": {
+              "@Value": "0"
+            },
+            "Manual": {
+              "@Value": "0"
+            },
+            "MidiControllerRange": {
+              "Min": {
+                "@Value": "0"
+              },
+              "Max": {
+                "@Value": "1"
+              }
+            },
+            "AutomationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            },
+            "ModulationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            }
+          },
+          "SustainLevel": {
+            "LomId": {
+              "@Value": "0"
+            },
+            "Manual": {
+              "@Value": "0.5"
+            },
+            "MidiControllerRange": {
+              "Min": {
+                "@Value": "0"
+              },
+              "Max": {
+                "@Value": "1"
+              }
+            },
+            "AutomationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            },
+            "ModulationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            }
+          },
+          "SustainTime": {
+            "LomId": {
+              "@Value": "0"
+            },
+            "Manual": {
+              "@Value": "1"
+            },
+            "MidiControllerRange": {
+              "Min": {
+                "@Value": "0"
+              },
+              "Max": {
+                "@Value": "1"
+              }
+            },
+            "AutomationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            },
+            "ModulationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            }
+          },
+          "ReleaseTime": {
+            "LomId": {
+              "@Value": "0"
+            },
+            "Manual": {
+              "@Value": "0.4847841263"
+            },
+            "MidiControllerRange": {
+              "Min": {
+                "@Value": "0"
+              },
+              "Max": {
+                "@Value": "1"
+              }
+            },
+            "AutomationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            },
+            "ModulationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            }
+          }
+        },
+        "Envelope.1": {
+          "ExponentialSlope": {
+            "LomId": {
+              "@Value": "0"
+            },
+            "Manual": {
+              "@Value": "true"
+            },
+            "AutomationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            },
+            "MidiCCOnOffThresholds": {
+              "Min": {
+                "@Value": "64"
+              },
+              "Max": {
+                "@Value": "127"
+              }
+            }
+          },
+          "Loop": {
+            "LomId": {
+              "@Value": "0"
+            },
+            "Manual": {
+              "@Value": "0"
+            },
+            "AutomationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            }
+          },
+          "FreeRun": {
+            "LomId": {
+              "@Value": "0"
+            },
+            "Manual": {
+              "@Value": "false"
+            },
+            "AutomationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            },
+            "MidiCCOnOffThresholds": {
+              "Min": {
+                "@Value": "64"
+              },
+              "Max": {
+                "@Value": "127"
+              }
+            }
+          },
+          "Legato": {
+            "LomId": {
+              "@Value": "0"
+            },
+            "Manual": {
+              "@Value": "false"
+            },
+            "AutomationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            },
+            "MidiCCOnOffThresholds": {
+              "Min": {
+                "@Value": "64"
+              },
+              "Max": {
+                "@Value": "127"
+              }
+            }
+          },
+          "AttackMod": {
+            "LomId": {
+              "@Value": "0"
+            },
+            "Manual": {
+              "@Value": "0"
+            },
+            "MidiControllerRange": {
+              "Min": {
+                "@Value": "0"
+              },
+              "Max": {
+                "@Value": "1"
+              }
+            },
+            "AutomationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            },
+            "ModulationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            }
+          },
+          "AttackTime": {
+            "LomId": {
+              "@Value": "0"
+            },
+            "Manual": {
+              "@Value": "0"
+            },
+            "MidiControllerRange": {
+              "Min": {
+                "@Value": "0"
+              },
+              "Max": {
+                "@Value": "1"
+              }
+            },
+            "AutomationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            },
+            "ModulationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            }
+          },
+          "DecayTime": {
+            "LomId": {
+              "@Value": "0"
+            },
+            "Manual": {
+              "@Value": "0.6000000238"
+            },
+            "MidiControllerRange": {
+              "Min": {
+                "@Value": "0"
+              },
+              "Max": {
+                "@Value": "1"
+              }
+            },
+            "AutomationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            },
+            "ModulationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            }
+          },
+          "AmpMod": {
+            "LomId": {
+              "@Value": "0"
+            },
+            "Manual": {
+              "@Value": "0.5"
+            },
+            "MidiControllerRange": {
+              "Min": {
+                "@Value": "0"
+              },
+              "Max": {
+                "@Value": "1"
+              }
+            },
+            "AutomationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            },
+            "ModulationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            }
+          },
+          "SustainLevel": {
+            "LomId": {
+              "@Value": "0"
+            },
+            "Manual": {
+              "@Value": "0.5"
+            },
+            "MidiControllerRange": {
+              "Min": {
+                "@Value": "0"
+              },
+              "Max": {
+                "@Value": "1"
+              }
+            },
+            "AutomationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            },
+            "ModulationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            }
+          },
+          "SustainTime": {
+            "LomId": {
+              "@Value": "0"
+            },
+            "Manual": {
+              "@Value": "1"
+            },
+            "MidiControllerRange": {
+              "Min": {
+                "@Value": "0"
+              },
+              "Max": {
+                "@Value": "1"
+              }
+            },
+            "AutomationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            },
+            "ModulationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            }
+          },
+          "ReleaseTime": {
+            "LomId": {
+              "@Value": "0"
+            },
+            "Manual": {
+              "@Value": "0.5718053579"
+            },
+            "MidiControllerRange": {
+              "Min": {
+                "@Value": "0"
+              },
+              "Max": {
+                "@Value": "1"
+              }
+            },
+            "AutomationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            },
+            "ModulationTarget": {
+              "@Id": "0",
+              "LockEnvelope": {
+                "@Value": "0"
+              }
+            }
+          }
+        },
+        "FilterSlave": {
+          "LomId": {
+            "@Value": "0"
+          },
+          "Manual": {
+            "@Value": "false"
+          },
+          "AutomationTarget": {
+            "@Id": "0",
+            "LockEnvelope": {
+              "@Value": "0"
+            }
+          },
+          "MidiCCOnOffThresholds": {
+            "Min": {
+              "@Value": "64"
+            },
+            "Max": {
+              "@Value": "127"
+            }
+          }
+        }
+      },
+      "SelectedFinger": {
+        "@Value": "7"
+      }
+    }
+  }
+}

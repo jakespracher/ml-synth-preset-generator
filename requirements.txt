@@ -1,0 +1,13 @@
+tensorflow==1.15.5
+xmltodict
+pytest
+click
+numpy
+jupyter
+pandas
+attrs
+cattrs
+pydot
+graphviz
+scikit-learn
+matplotlib

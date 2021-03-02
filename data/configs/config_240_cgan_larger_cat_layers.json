@@ -1,0 +1,28 @@
+{
+  "num_epochs": 500,
+  "batch_size": 25,
+  "discriminator_update_multiplier": 2,
+  "cgan_labels": [
+    "Lead",
+    "Pad",
+    "Bass",
+    "Strings_Brass_Keys_Guitar_Other"
+  ],
+  "discriminator_parameters": {
+    "category_input_layers": 3,
+    "learning_rate": 0.00005,
+    "hidden_layers": 2,
+    "layer_size": 500,
+    "dropout": 0.4,
+    "relu_alpha": 0.2
+  },
+  "generator_parameters": {
+    "category_input_layers": 3,
+    "learning_rate": 0.00005,
+    "latent_dim": 100,
+    "hidden_layers": 2,
+    "layer_size": 100,
+    "dropout": 0.4,
+    "relu_alpha": 0.2
+  }
+}
