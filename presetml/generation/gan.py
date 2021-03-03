@@ -40,8 +40,6 @@ def run(dataset: np.array, dest_preset_path: str, config: datatypes.GANConfig):
 
 def build_gan(data_len, config: datatypes.GANConfig):
     d_model = define_critic(in_dim=data_len, parameters=config)
-    # if config.cgan_labels:
-    #     data_len -= len(config.cgan_labels)
     g_model = define_generator(out_dim=data_len,
                               parameters=config)
     gan_model = define_gan(g_model, d_model, config=config)
