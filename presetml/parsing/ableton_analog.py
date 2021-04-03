@@ -229,11 +229,6 @@ def write_zipped_preset(file_path: str, content: str) -> NoReturn:
         zip_handle.write(content.encode('utf-8'))
 
 
-def write_xml():
-    write_preset_from_xml('//data/AnalogDefaultPreset.xml',
-                          f'/Users/vader/Music/Ableton/User Library/Presets/Instruments/Analog/test{uuid.uuid4()}.adv')
-
-
 def write_preset_from_xml(xml_path, target_path):
     with open(xml_path, 'r') as xml:
         write_zipped_preset(target_path, xml.read())
