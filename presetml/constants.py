@@ -1,30 +1,24 @@
 import os
 
 PROJECT_ROOT = os.getcwd()
-DEFAULT_PRESET_JSON_PATH = os.path.join(PROJECT_ROOT, 'presetml', 'parsing',
-                                        'default_dict.json')
+DEFAULT_PRESET_JSON_PATH = os.path.join(
+    PROJECT_ROOT, "presetml", "parsing", "default_dict.json"
+)
 
-TEST_PRESETS_PATH = os.path.join(PROJECT_ROOT, 'data', 'test_presets')
-ANALOG_PRESETS_PATH = os.path.join(PROJECT_ROOT, 'data', 'analog_library')
-GENERATED_PRESETS_DIR = os.path.join(PROJECT_ROOT, 'data', 'generated')
+TEST_PRESETS_PATH = os.path.join(PROJECT_ROOT, "data", "test_presets")
+ANALOG_PRESETS_PATH = os.path.join(PROJECT_ROOT, "data", "analog_library")
+GENERATED_PRESETS_DIR = os.path.join(PROJECT_ROOT, "data", "generated")
 
-CGAN_LABELS = [
-    'Lead',
-    'Pad',
-    'Bass',
-    'Brass',
-    'Strings',
-    'Keys'
-]
+CGAN_LABELS = ["Lead", "Pad", "Bass", "Brass", "Strings", "Keys"]
 
 
 CATEGORICAL_RANGES = {
-    'OscillatorWaveShape': 4,
-    'FilterType': 10,
-    'FilterDrive': 7,  # 0 is off
-    'LFOWaveShape': 5,
-    'PortamentoMode': 2,
-    'Loop': 4,  # 0 is off
+    "OscillatorWaveShape": 4,
+    "FilterType": 10,
+    "FilterDrive": 7,  # 0 is off
+    "LFOWaveShape": 5,
+    "PortamentoMode": 2,
+    "Loop": 4,  # 0 is off
 }
 
 TARGET_KEYS = [
@@ -104,8 +98,7 @@ TARGET_KEYS = [
     ["Ableton", "UltraAnalog", "SignalChain1", "LFOPhase"],
     ["Ableton", "UltraAnalog", "SignalChain1", "LFODelay"],
     ["Ableton", "UltraAnalog", "SignalChain1", "LFOFadeIn"],
-    ["Ableton", "UltraAnalog", "SignalChain1", "Envelope.0",
-     "ExponentialSlope"],
+    ["Ableton", "UltraAnalog", "SignalChain1", "Envelope.0", "ExponentialSlope"],
     ["Ableton", "UltraAnalog", "SignalChain1", "Envelope.0", "Loop"],
     ["Ableton", "UltraAnalog", "SignalChain1", "Envelope.0", "FreeRun"],
     ["Ableton", "UltraAnalog", "SignalChain1", "Envelope.0", "Legato"],
@@ -116,8 +109,7 @@ TARGET_KEYS = [
     ["Ableton", "UltraAnalog", "SignalChain1", "Envelope.0", "SustainLevel"],
     ["Ableton", "UltraAnalog", "SignalChain1", "Envelope.0", "SustainTime"],
     ["Ableton", "UltraAnalog", "SignalChain1", "Envelope.0", "ReleaseTime"],
-    ["Ableton", "UltraAnalog", "SignalChain1", "Envelope.1",
-     "ExponentialSlope"],
+    ["Ableton", "UltraAnalog", "SignalChain1", "Envelope.1", "ExponentialSlope"],
     ["Ableton", "UltraAnalog", "SignalChain1", "Envelope.1", "Loop"],
     ["Ableton", "UltraAnalog", "SignalChain1", "Envelope.1", "FreeRun"],
     ["Ableton", "UltraAnalog", "SignalChain1", "Envelope.1", "Legato"],
@@ -185,8 +177,7 @@ TARGET_KEYS = [
     ["Ableton", "UltraAnalog", "SignalChain2", "Envelope.0", "SustainLevel"],
     ["Ableton", "UltraAnalog", "SignalChain2", "Envelope.0", "SustainTime"],
     ["Ableton", "UltraAnalog", "SignalChain2", "Envelope.0", "ReleaseTime"],
-    ["Ableton", "UltraAnalog", "SignalChain2", "Envelope.1",
-     "ExponentialSlope"],
+    ["Ableton", "UltraAnalog", "SignalChain2", "Envelope.1", "ExponentialSlope"],
     ["Ableton", "UltraAnalog", "SignalChain2", "Envelope.1", "Loop"],
     ["Ableton", "UltraAnalog", "SignalChain2", "Envelope.1", "FreeRun"],
     ["Ableton", "UltraAnalog", "SignalChain2", "Envelope.1", "Legato"],
@@ -197,5 +188,5 @@ TARGET_KEYS = [
     ["Ableton", "UltraAnalog", "SignalChain2", "Envelope.1", "SustainLevel"],
     ["Ableton", "UltraAnalog", "SignalChain2", "Envelope.1", "SustainTime"],
     ["Ableton", "UltraAnalog", "SignalChain2", "Envelope.1", "ReleaseTime"],
-    ["Ableton", "UltraAnalog", "SignalChain2", "FilterSlave"]
+    ["Ableton", "UltraAnalog", "SignalChain2", "FilterSlave"],
 ]

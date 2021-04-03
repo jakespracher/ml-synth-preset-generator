@@ -5,8 +5,7 @@ from tensorflow_core.python.keras.constraints import Constraint
 from presetml.generation import preprocessing
 
 
-def gradient_penalty_loss(y_true, y_pred, averaged_samples,
-                          gradient_penalty_weight):
+def gradient_penalty_loss(y_true, y_pred, averaged_samples, gradient_penalty_weight):
     """Calculates the gradient penalty loss for a batch of "averaged" samples.
     In Improved WGANs, the 1-Lipschitz constraint is enforced by adding a term to the
     loss function that penalizes the network if the gradient norm moves away from 1.
@@ -32,8 +31,9 @@ def gradient_penalty_loss(y_true, y_pred, averaged_samples,
     # compute the euclidean norm by squaring ...
     gradients_sqr = K.square(gradients)
     #   ... summing over the rows ...
-    gradients_sqr_sum = K.sum(gradients_sqr,
-                              axis=np.arange(1, len(gradients_sqr.shape)))
+    gradients_sqr_sum = K.sum(
+        gradients_sqr, axis=np.arange(1, len(gradients_sqr.shape))
+    )
     #   ... and sqrt
     gradient_l2_norm = K.sqrt(gradients_sqr_sum)
     # compute lambda * (1 - ||grad||)^2 still for each single sample
@@ -61,7 +61,7 @@ def wasserstein_loss(y_true, y_pred):
 def load_real_samples(path, labels=None):
     vectors, labels = preprocessing.load_data(path, labels)
     # Scale from [0,1] to [-1,1]
-    vectors = (vectors - .5) / .5
+    vectors = (vectors - 0.5) / 0.5
     return vectors, labels
 
 
@@ -76,4 +76,4 @@ class ClipConstraint(Constraint):
 
     # get the config
     def get_config(self):
-        return {'clip_value': self.clip_value}
+        return {"clip_value": self.clip_value}

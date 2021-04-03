@@ -11,3 +11,4 @@ pydot
 graphviz
 scikit-learn
 matplotlib
+black

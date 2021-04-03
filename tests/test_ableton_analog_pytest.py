@@ -3,8 +3,9 @@ from presetml.parsing import ableton_analog
 from presetml import constants
 
 
-@pytest.fixture(params=ableton_analog.read_presets_from_dir(
-            constants.TEST_PRESETS_PATH)[:10])
+@pytest.fixture(
+    params=ableton_analog.read_presets_from_dir(constants.TEST_PRESETS_PATH)[:10]
+)
 def test_preset_data(request):
     return request.param
 

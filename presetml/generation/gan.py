@@ -31,27 +31,26 @@ from tensorflow.keras.utils import plot_model
 def run(dataset: np.array, dest_preset_path: str, config: datatypes.GANConfig):
     vectors, labels = dataset
     # create the gan
-    d_model, g_model, gan_model = build_gan(data_len=vectors.shape[1],
-                                            config=config)
+    d_model, g_model, gan_model = build_gan(data_len=vectors.shape[1], config=config)
     # train model
-    train(g_model, d_model, gan_model, vectors, labels,
-          dest_preset_path, config)
+    train(g_model, d_model, gan_model, vectors, labels, dest_preset_path, config)
 
 
 def build_gan(data_len, config: datatypes.GANConfig):
     d_model = define_critic(in_dim=data_len, parameters=config)
-    g_model = define_generator(out_dim=data_len,
-                              parameters=config)
+    g_model = define_generator(out_dim=data_len, parameters=config)
     gan_model = define_gan(g_model, d_model, config=config)
     return d_model, g_model, gan_model
 
 
 # define the standalone discriminator model
-def define_critic(in_dim: int = 216,
-                 parameters: datatypes.GANConfig = datatypes.GANConfig()):
+def define_critic(
+    in_dim: int = 216, parameters: datatypes.GANConfig = datatypes.GANConfig()
+):
     in_preset = Input(shape=in_dim)
-    noisy_input = GaussianNoise(
-        parameters.discriminator_parameters.input_noise_stdev)(in_preset)
+    noisy_input = GaussianNoise(parameters.discriminator_parameters.input_noise_stdev)(
+        in_preset
+    )
     # weight initialization
     init = RandomNormal(stddev=0.02)
     # weight constraint
@@ -60,39 +59,43 @@ def define_critic(in_dim: int = 216,
     if parameters.cgan_labels:
         # label input
         in_label = Input(shape=len(parameters.cgan_labels))
-        li = Dense(len(parameters.cgan_labels),
-                   kernel_initializer=init, kernel_constraint=const
-                   )(in_label)
-        li = LeakyReLU(alpha=parameters.discriminator_parameters.relu_alpha
-                       )(li)
+        li = Dense(
+            len(parameters.cgan_labels),
+            kernel_initializer=init,
+            kernel_constraint=const,
+        )(in_label)
+        li = LeakyReLU(alpha=parameters.discriminator_parameters.relu_alpha)(li)
         li = Dropout(parameters.discriminator_parameters.dropout)(li)
-        for _ in range(
-                parameters.discriminator_parameters.category_input_layers):
-            li = Dense(parameters.discriminator_parameters.category_layer_size,
-                       kernel_initializer=init,
-                       kernel_constraint=const)(li)
-            li = LeakyReLU(alpha=parameters.discriminator_parameters.relu_alpha
-                           )(li)
+        for _ in range(parameters.discriminator_parameters.category_input_layers):
+            li = Dense(
+                parameters.discriminator_parameters.category_layer_size,
+                kernel_initializer=init,
+                kernel_constraint=const,
+            )(li)
+            li = LeakyReLU(alpha=parameters.discriminator_parameters.relu_alpha)(li)
             li = Dropout(parameters.discriminator_parameters.dropout)(li)
         common_input = Concatenate()([noisy_input, li])
     else:
         common_input = noisy_input
-    model = Dense(parameters.discriminator_parameters.layer_size,
-                  kernel_initializer=init, kernel_constraint=const
-                  )(common_input)
-    model = LeakyReLU(alpha=parameters.discriminator_parameters.relu_alpha
-                     )(model)
+    model = Dense(
+        parameters.discriminator_parameters.layer_size,
+        kernel_initializer=init,
+        kernel_constraint=const,
+    )(common_input)
+    model = LeakyReLU(alpha=parameters.discriminator_parameters.relu_alpha)(model)
     model = Dropout(parameters.discriminator_parameters.dropout)(model)
     for _ in range(parameters.discriminator_parameters.hidden_layers):
-        model = Dense(parameters.discriminator_parameters.layer_size,
-                      kernel_initializer=init, kernel_constraint=const)(model)
-        model = LeakyReLU(alpha=parameters.discriminator_parameters.relu_alpha
-                          )(model)
+        model = Dense(
+            parameters.discriminator_parameters.layer_size,
+            kernel_initializer=init,
+            kernel_constraint=const,
+        )(model)
+        model = LeakyReLU(alpha=parameters.discriminator_parameters.relu_alpha)(model)
         model = Dropout(parameters.discriminator_parameters.dropout)(model)
-    model = Dense(1, activation='linear')(model)
+    model = Dense(1, activation="linear")(model)
     if parameters.cgan_labels:
         model = Model([in_preset, in_label], model)
-        plot_model(model, 'crit.png', show_shapes=True)
+        plot_model(model, "crit.png", show_shapes=True)
     else:
         model = Model(in_preset, model)
     # compile model
@@ -103,8 +106,9 @@ def define_critic(in_dim: int = 216,
 
 
 # define the standalone generator model
-def define_generator(out_dim: int = 216,
-                    parameters: datatypes.GANConfig = datatypes.GANConfig()):
+def define_generator(
+    out_dim: int = 216, parameters: datatypes.GANConfig = datatypes.GANConfig()
+):
     latent_input = Input(shape=parameters.generator_parameters.latent_dim)
     init = RandomNormal(stddev=0.02)
     in_label = None
@@ -112,36 +116,37 @@ def define_generator(out_dim: int = 216,
     if parameters.cgan_labels:
         # label input
         in_label = Input(shape=len(parameters.cgan_labels))
-        li = Dense(len(parameters.cgan_labels),
-                   kernel_initializer=init,
-                   )(in_label)
-        li = LeakyReLU(alpha=parameters.generator_parameters.relu_alpha
-                       )(li)
+        li = Dense(
+            len(parameters.cgan_labels),
+            kernel_initializer=init,
+        )(in_label)
+        li = LeakyReLU(alpha=parameters.generator_parameters.relu_alpha)(li)
         li = Dropout(parameters.generator_parameters.dropout)(li)
         for _ in range(parameters.generator_parameters.category_input_layers):
-            li = Dense(parameters.generator_parameters.category_layer_size,
-                       kernel_initializer=init)(li)
-            li = LeakyReLU(alpha=parameters.generator_parameters.relu_alpha
-                           )(li)
+            li = Dense(
+                parameters.generator_parameters.category_layer_size,
+                kernel_initializer=init,
+            )(li)
+            li = LeakyReLU(alpha=parameters.generator_parameters.relu_alpha)(li)
             li = Dropout(parameters.generator_parameters.dropout)(li)
         common_input = Concatenate()([latent_input, li])
     else:
         common_input = latent_input
-    model = Dense(parameters.generator_parameters.layer_size,
-                  kernel_initializer=init)(common_input)
+    model = Dense(parameters.generator_parameters.layer_size, kernel_initializer=init)(
+        common_input
+    )
     model = LeakyReLU(alpha=parameters.generator_parameters.relu_alpha)(model)
     model = Dropout(parameters.generator_parameters.dropout)(model)
     for _ in range(parameters.generator_parameters.hidden_layers):
-        model = Dense(parameters.generator_parameters.layer_size,
-                      kernel_initializer=init)(model)
-        model = LeakyReLU(
-            alpha=parameters.generator_parameters.relu_alpha)(model)
+        model = Dense(
+            parameters.generator_parameters.layer_size, kernel_initializer=init
+        )(model)
+        model = LeakyReLU(alpha=parameters.generator_parameters.relu_alpha)(model)
         model = Dropout(parameters.generator_parameters.dropout)(model)
-    model = Dense(out_dim, kernel_initializer=init,
-                  activation='tanh')(model)
+    model = Dense(out_dim, kernel_initializer=init, activation="tanh")(model)
     if parameters.cgan_labels:
         model = Model([latent_input, in_label], model)
-        plot_model(model, 'gen.png', show_shapes=True)
+        plot_model(model, "gen.png", show_shapes=True)
     else:
         model = Model(latent_input, model)
     return model
@@ -179,8 +184,15 @@ def define_gan(g_model, d_model, config, learning_rate: float = 0.00005):
 
 
 # train the generator and discriminator
-def train(g_model, c_model, gan_model, vectors, labels, dest_preset_path,
-          config: datatypes.GANConfig = datatypes.GANConfig()):
+def train(
+    g_model,
+    c_model,
+    gan_model,
+    vectors,
+    labels,
+    dest_preset_path,
+    config: datatypes.GANConfig = datatypes.GANConfig(),
+):
     # calculate the number of batches per training epoch
     bat_per_epo = int(vectors.shape[0] / config.batch_size)
     # calculate the number of training iterations
@@ -191,36 +203,32 @@ def train(g_model, c_model, gan_model, vectors, labels, dest_preset_path,
     c1_hist, c2_hist, g_hist = [], [], []
     # manually enumerate epochs
     for i in range(n_steps):
-        real_critic_loss, fake_critic_loss, gen_loss = _run_epoch(c_model,
-                                                                  config,
-                                                                  g_model,
-                                                                  gan_model,
-                                                                  half_batch,
-                                                                  labels,
-                                                                  vectors)
+        real_critic_loss, fake_critic_loss, gen_loss = _run_epoch(
+            c_model, config, g_model, gan_model, half_batch, labels, vectors
+        )
         if verbose:
-            print('>%d, c_real=%.3f, c_fake=%.3f gen=%.3f' % (
-                i + 1, real_critic_loss, fake_critic_loss, gen_loss))
+            print(
+                ">%d, c_real=%.3f, c_fake=%.3f gen=%.3f"
+                % (i + 1, real_critic_loss, fake_critic_loss, gen_loss)
+            )
         c1_hist.append(real_critic_loss)
         c2_hist.append(fake_critic_loss)
         g_hist.append(gen_loss)
         # evaluate the model performance every 'epoch'
         if (i + 1) % 100 == 0:
             plot_history(c1_hist, c2_hist, g_hist, i, dest_preset_path)
-            summarize_performance(i, g_model, dest_preset_path,
-                                  config=config)
-    plot_history(c1_hist, c2_hist, g_hist, 'final', dest_preset_path)
+            summarize_performance(i, g_model, dest_preset_path, config=config)
+    plot_history(c1_hist, c2_hist, g_hist, "final", dest_preset_path)
 
 
-def _run_epoch(c_model, config,
-               g_model, gan_model, half_batch, labels, vectors):
+def _run_epoch(c_model, config, g_model, gan_model, half_batch, labels, vectors):
     c_real_losses, c_fake_losses = [], []
     for _ in range(config.discriminator_update_multiplier):
-        real_loss = _update_critic_on_real_samples(c_model, config, half_batch,
-                                                   labels, vectors)
+        real_loss = _update_critic_on_real_samples(
+            c_model, config, half_batch, labels, vectors
+        )
         c_real_losses.append(real_loss)
-        fake_loss = _update_critic_on_fake_samples(c_model, config, g_model,
-                                                   half_batch)
+        fake_loss = _update_critic_on_fake_samples(c_model, config, g_model, half_batch)
         c_fake_losses.append(fake_loss)
 
     g_loss = _update_generator(config, gan_model, half_batch)
@@ -228,10 +236,10 @@ def _run_epoch(c_model, config,
 
 
 def _update_critic_on_real_samples(c_model, config, half_batch, labels, vectors):
-    real_vectors, class_labels, real_labels = \
-        _generate_real_samples(vectors, labels, n_samples=half_batch)
-    real_loss = _update_critic(c_model, config, real_vectors, class_labels,
-                               real_labels)
+    real_vectors, class_labels, real_labels = _generate_real_samples(
+        vectors, labels, n_samples=half_batch
+    )
+    real_loss = _update_critic(c_model, config, real_vectors, class_labels, real_labels)
     return real_loss
 
 
@@ -261,10 +269,9 @@ def _update_critic_on_fake_samples(c_model, config, g_model, half_batch):
         g_model=g_model,
         latent_dim=config.generator_parameters.latent_dim,
         n_samples=half_batch,
-        labels=config.cgan_labels
+        labels=config.cgan_labels,
     )
-    fake_loss = _update_critic(c_model, config, gen_vectors, class_labels,
-                               fake_labels)
+    fake_loss = _update_critic(c_model, config, gen_vectors, class_labels, fake_labels)
     return fake_loss
 
 
@@ -298,11 +305,11 @@ def generate_fake_samples(g_model, latent_dim, n_samples, labels=None):
             elif constants.CATEGORICAL_RANGES.get(key):
                 cat_range = constants.CATEGORICAL_RANGES.get(key)
                 category_adder += cat_range - 1
-                value = np.argmax(vector[i:i + cat_range - 1])
+                value = np.argmax(vector[i : i + cat_range - 1])
                 assert value in range(cat_range)
                 for j in range(cat_range):
-                    vector[i+j] = -1.
-                vector[i+value] = 1.
+                    vector[i + j] = -1.0
+                vector[i + value] = 1.0
                 # print(f'{key_paths[key_index][-1]}: {vector[i]}')
 
     return gen_vectors, class_labels, fake_labels
@@ -310,20 +317,22 @@ def generate_fake_samples(g_model, latent_dim, n_samples, labels=None):
 
 def normalize_boolean_parameter(value):
     if round(value) < 0:
-        return -1.
+        return -1.0
     else:
-        return 1.
+        return 1.0
 
 
 def _update_generator(config, gan_model, n_samples):
     gan_input = _generate_latent_points(
-        config.generator_parameters.latent_dim, n_samples)
+        config.generator_parameters.latent_dim, n_samples
+    )
     # invert labels for the fake samples to update generator weights
     real_labels = -np.ones((n_samples, 1))
     # update the generator via the critic's error
     if config.cgan_labels:
         class_labels = _generate_random_class_labels(
-            n_labels=n_samples, n_classes=len(config.cgan_labels))
+            n_labels=n_samples, n_classes=len(config.cgan_labels)
+        )
         gan_input = [gan_input, class_labels]
     g_loss = gan_model.train_on_batch(gan_input, real_labels)
     return g_loss
@@ -348,46 +357,46 @@ def _generate_random_class_labels(n_labels, n_classes):
 # create a line plot of loss for the gan and save to file
 def plot_history(d1_hist, d2_hist, g_hist, name, dest_dir):
     # plot history
-    pyplot.plot(d1_hist, label='crit_real')
-    pyplot.plot(d2_hist, label='crit_fake')
-    pyplot.plot(g_hist, label='gen')
+    pyplot.plot(d1_hist, label="crit_real")
+    pyplot.plot(d2_hist, label="crit_fake")
+    pyplot.plot(g_hist, label="gen")
     pyplot.legend()
     # save plot to file
-    plots_dir = os.path.join(dest_dir, 'plots')
+    plots_dir = os.path.join(dest_dir, "plots")
     if not os.path.exists(plots_dir):
         os.makedirs(plots_dir)
-    pyplot.savefig(os.path.join(plots_dir, f'{name}_plot_line_plot_loss.png'))
+    pyplot.savefig(os.path.join(plots_dir, f"{name}_plot_line_plot_loss.png"))
     pyplot.close()
 
 
 # evaluate the discriminator, plot generated images, save generator model
-def summarize_performance(epoch, g_model, dest_preset_path,
-                          n_samples=100, config=datatypes.GANConfig()):
+def summarize_performance(
+    epoch, g_model, dest_preset_path, n_samples=100, config=datatypes.GANConfig()
+):
     # prepare fake examples
     gen_vectors, class_labels, fake_labels = generate_fake_samples(
-        g_model,
-        config.generator_parameters.latent_dim,
-        n_samples,
-        config.cgan_labels
+        g_model, config.generator_parameters.latent_dim, n_samples, config.cgan_labels
     )
     # rescale back to [0,1] to write the preset for human evaluation
     gen_presets = (gen_vectors + 1.0) / 2.0
     gen_presets = np.clip(gen_presets, 0, 1)
-    presets_dir = os.path.join(dest_preset_path, 'presets')
+    presets_dir = os.path.join(dest_preset_path, "presets")
     if not os.path.exists(presets_dir):
         os.makedirs(presets_dir)
     if config.cgan_labels:
         label_indices = np.argmax(class_labels, axis=1)
-        class_labels = list(
-            map(lambda label: config.cgan_labels[label], label_indices)
-        )
-    save_presets(gen_presets, epoch, presets_dir,
-                 labels=class_labels if config.cgan_labels else None)
+        class_labels = list(map(lambda label: config.cgan_labels[label], label_indices))
+    save_presets(
+        gen_presets,
+        epoch,
+        presets_dir,
+        labels=class_labels if config.cgan_labels else None,
+    )
     # save the generator model tile file
-    models_dir = os.path.join(dest_preset_path, 'models')
+    models_dir = os.path.join(dest_preset_path, "models")
     if not os.path.exists(models_dir):
         os.makedirs(models_dir)
-    filename = os.path.join(models_dir, f'generator_model_e{epoch + 1}.h5')
+    filename = os.path.join(models_dir, f"generator_model_e{epoch + 1}.h5")
     g_model.save(filename)
 
 
@@ -395,10 +404,9 @@ def summarize_performance(epoch, g_model, dest_preset_path,
 def save_presets(examples, epoch, path, n=1, labels=None):
     # write n presets
     for i in range(n):
-        filename = f'generated_preset_{i}e{epoch+1}'
+        filename = f"generated_preset_{i}e{epoch+1}"
         if labels is not None:
             filename += labels[i]
-        ableton_analog.write_preset_from_vector(examples[n],
-                                                filename, path)
+        ableton_analog.write_preset_from_vector(examples[n], filename, path)
         if verbose:
-            print(f'Wrote preset {filename}')
+            print(f"Wrote preset {filename}")
