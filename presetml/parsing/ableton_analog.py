@@ -1,3 +1,9 @@
+"""
+ableton_analog
+
+Utilities for reading and writing Ableton Analog presets to/from vectors
+
+"""
 import os
 import xmltodict
 import gzip
@@ -14,7 +20,8 @@ EXTRACTED_PRESET_DIR = "/tmp/presets"
 def read_presets_from_dir(
     target_path=f"{constants.ANALOG_PRESETS_PATH}", labels=None
 ) -> [str, np.array]:
-    vectors = []
+    """Reads presets from a directory, returns tuples of (preset xml, normalized vector)"""
+    vector_tuples = []
     label = None
     for root, dirs, files in os.walk(target_path):
         if labels:
@@ -26,15 +33,15 @@ def read_presets_from_dir(
                     label = int(labels.index(key))
             if not found:
                 continue
-        vectors += [
-            vector_from_file(root, f, constants.TARGET_KEYS) + (label,)
+        vector_tuples += [
+            vector_and_xml_from_preset_file(root, f, constants.TARGET_KEYS) + (label,)
             for f in files
             if f.endswith(".adv")
         ]
-    return vectors
+    return vector_tuples
 
 
-def vector_from_file(
+def vector_and_xml_from_preset_file(
     root: str, file_name: str, target_keys: list = constants.TARGET_KEYS
 ) -> (str, np.array):
     xml_preset = unzip_preset(os.path.join(root, file_name))
@@ -240,6 +247,7 @@ def write_value_for_parameter(key, value) -> str:
 
 
 def write_zipped_preset(file_path: str, content: str) -> NoReturn:
+    """ Utility for writing final preset content as zip file """
     with gzip.open(file_path, "wb") as zip_handle:
         zip_handle.write(content.encode("utf-8"))
 

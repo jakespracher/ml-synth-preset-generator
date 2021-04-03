@@ -1,4 +1,5 @@
 import pytest
+import uuid
 from presetml.parsing import ableton_analog
 from presetml import constants
 
