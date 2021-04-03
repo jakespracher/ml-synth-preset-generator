@@ -29,7 +29,7 @@ By default, this will output models, plots, and presets to data/generated in the
 
 To generate presets from a model, use the `generate_from_gan.py` script. Example usage:
 
-`python generate_from_gan.py --config-file data/configs/config_240_cgan.json --model-path data/generated/models/generator_model_e1000.h5 --dest-path /Users/jakespracher/Music/Ableton/User\ Library/ML\ Presets --n-samples 10`
+`python generate_from_gan.py --config-file data/configs/config_240_cgan.json --model-path data/configs/config_240_cgan_generator_model_e1000.h5 --dest-path . --n-samples 10`
 
 To evaluate presets, you will need [Ableton](ableton.com). You can get a 90 day free trial [here](https://www.ableton.com/en/trial/)
 
