@@ -4,7 +4,7 @@ from presetml import constants
 
 
 @pytest.fixture(
-    params=ableton_analog.read_presets_from_dir(constants.TEST_PRESETS_PATH)[:10]
+    params=ableton_analog.read_presets_from_dir(constants.TEST_PRESETS_PATH)
 )
 def test_preset_data(request):
     return request.param
