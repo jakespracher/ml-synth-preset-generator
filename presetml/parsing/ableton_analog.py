@@ -10,7 +10,7 @@ import gzip
 import json
 import uuid
 import numpy as np
-from typing import NoReturn
+from typing import NoReturn, List
 
 from presetml import constants
 
@@ -54,11 +54,19 @@ def unzip_preset(file_path: str) -> str:
 
 
 def vector_from_preset(xmlpreset: str, target_keys: list) -> np.array:
+    """Build a preset vector given the preset xml and keys to extract values for.
+    Target keys is a list of list of keys. The second list is the keys that traverse
+    from the json root to the target metadata.
+    """
     parameters_json = xmltodict.parse(xmlpreset)
     return build_vector(parameters_json, target_keys)
 
 
 def build_vector(parameters_json: dict, target_keys: list) -> np.array:
+    """Build a preset vector given the preset json and keys to extract values for.
+    Target keys is a list of list of keys. The second list is the keys that traverse
+    from the json root to the target metadata.
+    """
     parameters = [
         (key[-1], extract_target_metadata(parameters_json, key)) for key in target_keys
     ]
@@ -68,7 +76,9 @@ def build_vector(parameters_json: dict, target_keys: list) -> np.array:
     return list(parameter_values)
 
 
-def extract_target_metadata(parameters_json, target_key):
+def extract_target_metadata(parameters_json: dict, target_key: list):
+    """Traverse target_key list, indexing into parameters_json level by level.
+    Return metadata dict for the key. Target key is a list of keys."""
     value_dict = parameters_json
     for level in target_key:
         value_dict = value_dict[level]
