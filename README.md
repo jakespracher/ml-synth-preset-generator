@@ -1,6 +1,6 @@
 # Generating Musical Synthesizer Patches with Machine Learning
 
-This repo accompanies this blog post. The premise is to generate high-quality presets for the Ableton Analog synthesizer in a particular style automatically using generative machine learning models.
+This repo accompanies this [blog post](https://jakespracher.medium.com/generating-musical-synthesizer-patches-with-machine-learning-c52f66dfe751). The premise is to generate high-quality presets for the Ableton Analog synthesizer in a particular style automatically using generative machine learning models.
 
 ## Setup
 
